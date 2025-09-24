@@ -3,89 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Moda y Estilo Femenino</title>
-<style>
-  /* BODY: FONDO CAMALEÓN FEMENINO */
-  body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: "Segoe UI", Arial, sans-serif;
-    color: #fff;
-    overflow-x: hidden;
-    background: linear-gradient(135deg, 
-      #FF00FF, #FF6F61, #FF00AA, #8A2BE2, #00CED1,
-      #FF69B4, #D8BFD8, #FFDAB9, #E6E6FA, #98FF98,
-      #FFF0F5, #FFE5B4, #F3E5F5, #B2EBF2, #E0FFF0);
-    background-size: 500% 500%;
-    animation: gradientAnim 30s ease infinite;
-  }
-
-  @keyframes gradientAnim {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  /* CONTENEDOR PRINCIPAL */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    border: 4px solid #fff;
-    border-radius: 20px;
-    padding: 40px;
-    margin: 40px auto;
-    box-sizing: border-box;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    background-color: rgba(0,0,0,0.3);
-    opacity: 1;
-    transition: opacity 1s ease;
-  }
-
-  .panel {
-    padding: 30px;
-    border-radius: 15px;
-  }
-
-  /* TITULO */
-  h1 {
-    font-size: 70px;
-    text-align: center;
-    margin: 60px 20px 40px;
-    background: linear-gradient(90deg, #FF69B4, #D8BFD8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
-  }
-
-  /* SUBTÍTULOS */
-  h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-    color: #FFDAB9;
-    text-align: left;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-  }
-
-  /* PÁRRAFOS */
-  p {
-    font-size: 20px;
-    text-align: left;
-    line-height: 1.6;
-    color: #fff;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
-  }
-
-  .intro {
-    font-style: italic;
-  }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- CONTENIDO -->
   <div class="container">
     <div class="panel">
       <section>
@@ -128,68 +48,51 @@
           Durante la Edad Media, la moda estuvo influenciada por la iglesia y la nobleza.  
           Colores, telas y bordados indicaban riqueza y posición, y la vestimenta era  
           un reflejo de la estricta estructura social. Los artesanos perfeccionaron  
-          técnicas de costura y bordado, y cada detalle tenía un significado profundo.  
-          A medida que pasaban los siglos, la moda comenzó a evolucionar, integrando  
-          elementos de diferentes culturas y adaptándose a nuevas ideas y materiales.
+          técnicas de costura y bordado, y cada detalle tenía un significado profundo.
         </p>
         <p>
           El Renacimiento marcó un punto de inflexión, combinando arte y moda en un solo concepto.  
           Los vestidos eran obras de arte, llenos de bordados, capas y texturas que  
           mostraban lujo y creatividad. La moda comenzó a reflejar no solo estatus  
-          sino también personalidad y estilo individual, y surgieron tendencias  
-          que marcaron épocas y regiones. Así nació la idea de la moda como expresión  
-          artística y cultural.
+          sino también personalidad y estilo individual.
         </p>
         <p>
           En los siglos XVIII y XIX, la industrialización permitió la producción masiva  
           de ropa, haciendo que la moda se volviera accesible a más personas.  
           Los estilos comenzaron a cambiar más rápido, influenciados por la política,  
-          el arte y la tecnología. Surgieron diseñadores reconocidos que crearon  
-          colecciones pensadas para la élite, mientras la gente común también adoptaba  
-          nuevas tendencias gracias a tejidos más económicos y a la creciente disponibilidad  
-          de prendas confeccionadas.
+          el arte y la tecnología.
         </p>
         <p>
           El siglo XX trajo consigo revoluciones en todos los aspectos de la vida,  
           y la moda no fue la excepción. Desde los trajes formales hasta la ropa casual,  
           cada década presentó innovaciones que reflejaban cambios sociales, culturales  
-          y tecnológicos. La moda comenzó a influir en la música, el cine y los movimientos  
-          juveniles, convirtiéndose en una forma de identidad personal y colectiva.
+          y tecnológicos.
         </p>
         <p>
           La globalización permitió que estilos de diferentes continentes se mezclaran,  
           creando nuevas tendencias que cruzaban fronteras. Los diseñadores se inspiraban  
           en culturas lejanas, mientras las redes sociales permitían la difusión inmediata  
-          de ideas y estilos. Así, la moda se convirtió en un fenómeno mundial,  
-          dinámico y en constante transformación, capaz de adaptarse a nuevas necesidades  
-          y gustos.
+          de ideas y estilos.
         </p>
         <p>
           La sostenibilidad y la conciencia ambiental han marcado el inicio del siglo XXI.  
           Cada vez más marcas se preocupan por materiales reciclables, procesos de producción  
-          éticos y moda responsable. Los consumidores buscan prendas que no solo sean  
-          estéticamente atractivas, sino que también respeten al planeta y a las personas.  
-          Esta nueva era combina creatividad, innovación y responsabilidad social,  
-          redefiniendo la moda de manera integral.
+          éticos y moda responsable.
         </p>
         <p>
           Hoy, la moda no se limita a la pasarela. Vive en las calles, en las redes sociales,  
           en blogs y en la vida cotidiana. Cada elección de ropa es una declaración de  
-          personalidad, gustos y valores. La combinación de lo clásico con lo moderno,  
-          lo artesanal con lo digital, permite que cada persona encuentre su estilo único  
-          y cuente su propia historia a través de la vestimenta. La moda es comunicación,  
-          expresión y arte.
+          personalidad, gustos y valores.
         </p>
         <p>
           La evolución de la moda es un reflejo del cambio constante en la sociedad.  
           Innovaciones tecnológicas, movimientos culturales y tendencias globales continúan  
-          transformando cómo nos vestimos y cómo interpretamos la estética. La moda sigue  
-          siendo un lienzo donde la historia, la identidad y la creatividad se encuentran,  
-          y cada prenda representa no solo estilo, sino también una conexión profunda  
-          con la cultura y la humanidad.
+          transformando cómo nos vestimos y cómo interpretamos la estética.
         </p>
       </section>
     </div>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
