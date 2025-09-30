@@ -96,30 +96,50 @@
  
   <script src="script.js"></script>
 
-<!-- Botón para cargar Parte 2 -->
-<button onclick="cargarParte2()">Ir a Parte 2</button>
-
-<!-- Contenedor donde se cargará el contenido -->
-<div id="contenido"></div>
+<!-- Botón grande y camaleónico -->
+<button onclick="cargarParte2()" class="boton-camaleon">
+  Ir a Parte 2
+</button>
 
 <script>
   function cargarParte2() {
     fetch('pag2.html')
       .then(res => res.text())
       .then(data => {
-        // Insertar solo el contenido de pag2.html sin estilos externos
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = data;
-
-        // Si pag2.html tiene <body>, tomar su contenido, sino todo
         const contenido = tempDiv.querySelector('body') || tempDiv;
-
-        // Reemplazar el div con el contenido de Parte 2
-        document.getElementById('contenido').innerHTML = contenido.innerHTML;
+        document.body.innerHTML = contenido.innerHTML;
       })
       .catch(err => console.error('Error al cargar Parte 2:', err));
   }
 </script>
+
+<style>
+  .boton-camaleon {
+    font-size: 24px;          /* Texto grande */
+    padding: 20px 40px;       /* Botón más ancho y alto */
+    border: none;             /* Sin borde */
+    border-radius: 12px;      /* Bordes redondeados */
+    cursor: pointer;
+    color: white;             /* Texto blanco */
+    background: linear-gradient(45deg, #ff6b6b, #f7d794, #1dd1a1, #54a0ff); /* Fondo tipo camaleón */
+    background-size: 400% 400%;
+    animation: camaleon 10s ease infinite; /* Animación de cambio de color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto hover */
+  }
+
+  .boton-camaleon:hover {
+    transform: scale(1.1);    /* Crece al pasar el cursor */
+    box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Sombra para resaltar */
+  }
+
+  @keyframes camaleon {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+</style>
 
 </body>
 </html>
