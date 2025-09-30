@@ -95,13 +95,31 @@
 
  
   <script src="script.js"></script>
-<button onclick="document.getElementById('miFrame').src='pag2.html'">
-  Ir a Parte 2
-</button>
 
-<br><br>
+<!-- Botón para cargar Parte 2 -->
+<button onclick="cargarParte2()">Ir a Parte 2</button>
 
-<iframe id="miFrame" src="" width="100%" height="500px" style="border:1px solid #ccc;"></iframe>
+<!-- Contenedor donde se cargará el contenido -->
+<div id="contenido"></div>
+
+<script>
+  function cargarParte2() {
+    fetch('pag2.html')
+      .then(res => res.text())
+      .then(data => {
+        // Insertar solo el contenido de pag2.html sin estilos externos
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = data;
+
+        // Si pag2.html tiene <body>, tomar su contenido, sino todo
+        const contenido = tempDiv.querySelector('body') || tempDiv;
+
+        // Reemplazar el div con el contenido de Parte 2
+        document.getElementById('contenido').innerHTML = contenido.innerHTML;
+      })
+      .catch(err => console.error('Error al cargar Parte 2:', err));
+  }
+</script>
 
 </body>
 </html>
